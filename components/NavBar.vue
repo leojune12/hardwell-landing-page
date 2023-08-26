@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg">
         <div class="container-xxl d-flex justify-content-between">
-            <a class="navbar-brand m-0" href="#">
+            <a class="navbar-brand m-0 p-0 d-flex" href="#">
                 <img src="/images/logo.svg" alt="">
             </a>
             <ul class="navbar-nav mb-2 mb-lg-0 d-none d-lg-flex li-gap">
@@ -29,7 +29,7 @@
             </button>
             <div class="offcanvas offcanvas-end d-block d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand p-0 d-flex" href="#">
                         <img src="/images/logo.svg" alt="">
                     </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -72,12 +72,12 @@ export default {
     @import "~/assets/scss/mixins/breakpoints";
 
     .navbar {
-        padding-top: 20px;
+        padding: 16px 0;
     }
 
     @include media-breakpoint-up(lg) {
         .navbar {
-            padding-top: 40px;
+            padding-top: 24px;
         }
     }
 
