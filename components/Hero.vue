@@ -4,7 +4,7 @@
         <img src="/images/dots.svg" alt="" class="dots-left-2 d-none d-md-block">
         <img src="/images/dots.svg" alt="" class="dots-right-1 d-none d-md-block">
         <img src="/images/dots.svg" alt="" class="dots-right-2 d-none d-md-block">
-        <div class="container-xxl pt-5 d-flex flex-column flex-md-row align-items-center">
+        <div class="container-xxl pt-5 pb-5 pb-md-0 d-flex flex-column flex-md-row align-items-center">
             <div class="hero-text">
                 <div class="agency-name d-flex align-items-center text-md-2xl text-xl justify-content-md-start justify-content-center">
                     <div class="red-line me-1"></div>
