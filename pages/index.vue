@@ -2,6 +2,7 @@
     <div>
         <NavBar />
         <Hero />
+        <Service />
     </div>
 </template>
 <script>
