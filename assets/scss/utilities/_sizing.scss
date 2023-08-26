@@ -1,0 +1,38 @@
+@import "~/assets/scss/mixins/breakpoints";
+
+@include media-breakpoint-up(xs) {
+    .w-xs-auto {
+        width: 100%;
+    }
+
+}
+
+@include media-breakpoint-up(sm) {
+    .w-sm-auto {
+        width: auto !important;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .w-md-auto {
+        width: auto !important;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .w-lg-auto {
+        width: auto !important;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .w-xl-auto {
+        width: auto !important;
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .w-xxl-auto {
+        width: auto !important;
+    }
+}
