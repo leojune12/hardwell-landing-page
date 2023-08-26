@@ -13,6 +13,11 @@
     src: url('/fonts/OpenSans-Regular.ttf') format('opentype');
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url('/fonts/Poppins-Regular.ttf') format('opentype');
+}
+
 .font-family-epilogue {
     font-family: Epilogue;
 }
@@ -23,4 +28,8 @@
 
 .font-family-open-sans {
     font-family: Open Sans;
+}
+
+.font-family-poppins {
+    font-family: Poppins;
 }
