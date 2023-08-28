@@ -28,6 +28,48 @@
                 </div>
             </div>
         </div>
+        <div class="container-xxl py-5">
+            <div class="row gy-4">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="/images/work-1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="/images/work-2.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="row categories gy-4">
+                <div class="col-md-4">
+                    <div class="category-card p-5">
+                        <div class="revenue-value">
+                            4.200%
+                        </div>
+                        <div class="revenue-description">
+                            Revenue
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card p-5">
+                        <div class="projects-value">
+                            73+
+                        </div>
+                        <div class="projects-description">
+                            Projects
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card p-5">
+                        <div class="uptime-value">
+                            99.5+
+                        </div>
+                        <div class="uptime-description">
+                            Uptime
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -90,6 +132,68 @@ export default {
                 font-weight: 400;
                 line-height: 32px; /* 200% */
                 max-width: 500px;
+            }
+        }
+
+        .categories {
+            .category-card {
+                border-radius: 8px;
+                border: 1px solid #DDD;
+                background: #FFF;
+            }
+            .revenue-value {
+                color: #9CD161;
+                text-align: center;
+                font-family: Epilogue;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 64px; /* 114.286% */
+            }
+            .revenue-description {
+                color: #9CD161;
+                text-align: center;
+                font-family: Epilogue;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 160% */
+            }
+            .projects-value {
+                color: #F5AD0D;
+                text-align: center;
+                font-family: Epilogue;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 64px; /* 114.286% */
+            }
+            .projects-description {
+                color: #F5AD0D;
+                text-align: center;
+                font-family: Epilogue;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 160% */
+            }
+            .uptime-value {
+                color: #FB690C;
+                text-align: center;
+                font-family: Epilogue;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 64px; /* 114.286% */
+            }
+            .uptime-description {
+                color: #FB690C;
+                text-align: center;
+                font-family: Epilogue;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 160% */
             }
         }
     }
