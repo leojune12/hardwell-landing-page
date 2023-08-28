@@ -3,6 +3,7 @@
         <NavBar />
         <Hero />
         <Service />
+        <About />
     </div>
 </template>
 <script>
