@@ -4,6 +4,7 @@
         <Hero />
         <Service />
         <About />
+        <Work />
     </div>
 </template>
 <script>
