@@ -5,6 +5,7 @@
         <Service />
         <About />
         <Work />
+        <Analyze />
     </div>
 </template>
 <script>
