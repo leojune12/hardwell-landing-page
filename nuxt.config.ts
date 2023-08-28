@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   css: [
-    'assets/scss/bootstrap.scss',
+    '~/assets/scss/bootstrap.scss',
     '~/assets/scss/main.scss'
   ],
   plugins: [
