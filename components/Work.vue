@@ -1,5 +1,5 @@
 <template>
-    <div class="work-section">
+    <div class="work-section py-0 py-md-5">
         <div class="container-xxl py-5 header">
             <div class="primary-text text-4xl text-md-5xl text-lg-6xl mb-4">
                 Discover Our Work
@@ -37,7 +37,7 @@
                     <img src="/images/work-2.png" alt="" class="img-fluid">
                 </div>
             </div>
-            <div class="row categories gy-4">
+            <div class="row categories gy-4 pt-5">
                 <div class="col-md-4">
                     <div class="category-card p-5">
                         <div class="revenue-value">
