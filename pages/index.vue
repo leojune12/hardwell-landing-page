@@ -9,6 +9,7 @@
         <Team />
         <Testimonials />
         <Clients />
+        <Blog />
     </div>
 </template>
 <script>
