@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <div class="container-xxl">
-            <div class="row gy-5 py-5 analyze-section">
+    <div class="py-5">
+        <div class="container-xxl pb-5">
+            <div class="row gy-5 gy-md-0 analyze-section">
                 <div class="col-md-6 text-center text-md-start">
                     <div class="primary-text text-4xl text-md-5xl text-lg-6xl mb-4">
                         Analyze <br> & Improve
@@ -36,7 +36,7 @@
         </div>
         <div class="row work-section mx-auto py-5 position-relative">
             <div class="bg-color"></div>
-            <div class="container-xxl py-5">
+            <div class="container-xxl py-0 py-md-5">
                 <div class="row text-center text-md-start">
                     <div class="col-md-6 primary-text mb-4 mb-md-0">
                         How We Work

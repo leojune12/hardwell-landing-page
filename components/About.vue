@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 text-center text-md-start pt-5">
+            <div class="col-md-6 text-center text-md-start d-flex align-items-center pt-5 pt-md-0">
                 <div class="text-section mx-auto">
                     <div class="about-text text-center text-md-start mb-3">
                         About

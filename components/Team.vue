@@ -1,6 +1,6 @@
 <template>
     <div class="container-xxl py-5">
-        <div class="pt-5">
+        <div class="pt-0 pt-md-5">
             <div class="primary-text text-4xl text-md-5xl text-lg-6xl mb-3 mb-md-4">
                 Team Members
             </div>
@@ -8,7 +8,7 @@
                 Combine text with sounds, pictures, graphics and video clips.
             </div>
         </div>
-        <div class="team-members row gy-4 gy-md-0 py-5">
+        <div class="team-members row gy-4 gy-md-0 pt-5">
             <div class="col-md-6 col-lg-3 text-center">
                 <div class="d-flex justify-content-center mb-4">
                     <img src="/images/team-1.png" alt="" class="img-fluid rounded-3">

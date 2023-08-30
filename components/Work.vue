@@ -8,28 +8,30 @@
                 Web designer is responsible for creating the design and layout of a website.
             </div>
         </div>
-        <div class="content py-5">
-            <div class="container-xxl">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-column justify-content-center pb-5 pb-md-0 text-center text-md-start ps-md-5">
-                        <div class="user-interface-text mb-3">
-                            User Interface
+        <div class="pb-0 pb-md-5">
+            <div class="content py-5">
+                <div class="container-xxl">
+                    <div class="row">
+                        <div class="col-md-6 d-flex flex-column justify-content-center pb-5 pb-md-0 text-center text-md-start ps-md-5">
+                            <div class="user-interface-text mb-3">
+                                User Interface
+                            </div>
+                            <div class="primary-text text-3xl text-md-4xl mb-3 mx-auto m-md-0">
+                                Creative Agency & Portfolio
+                            </div>
+                            <div class="secondary-text mx-auto m-md-0">
+                                Web designers plan, create and code internet sites and web pages, text with sounds.
+                            </div>
                         </div>
-                        <div class="primary-text text-3xl text-md-4xl mb-3 mx-auto m-md-0">
-                            Creative Agency & Portfolio
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <img src="/images/image-12.png" alt="" class="mx-auto img-fluid">
                         </div>
-                        <div class="secondary-text mx-auto m-md-0">
-                            Web designers plan, create and code internet sites and web pages, text with sounds.
-                        </div>
-                    </div>
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <img src="/images/image-12.png" alt="" class="mx-auto img-fluid">
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-xxl py-5">
-            <div class="row gy-4">
+            <div class="row gy-3 gy-md-0">
                 <div class="col-md-6 d-flex justify-content-center">
                     <img src="/images/work-1.png" alt="" class="img-fluid">
                 </div>

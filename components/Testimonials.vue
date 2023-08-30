@@ -1,6 +1,6 @@
 <template>
     <div class="container-xxl py-5">
-        <div class="pt-5">
+        <div>
             <div class="primary-text text-4xl text-md-5xl text-lg-6xl mb-3 mb-md-4">
                 Our Testimonials
             </div>
@@ -8,7 +8,7 @@
                 Read some awesome feedback from our students all over the world. We are giving the best to our students
             </div>
         </div>
-        <div class="testimonials row gy-4 gy-md-0 py-5">
+        <div class="testimonials row gy-4 gy-md-0 pt-5">
             <div class="col-md-4">
                 <div class="item px-4 py-5">
                     <div class="mb-4 testimony">
