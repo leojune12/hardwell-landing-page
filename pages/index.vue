@@ -10,6 +10,7 @@
         <Testimonials />
         <Clients />
         <Blog />
+        <Footer />
     </div>
 </template>
 <script>
