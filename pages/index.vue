@@ -6,6 +6,7 @@
         <About />
         <Work />
         <Analyze />
+        <Team />
     </div>
 </template>
 <script>
