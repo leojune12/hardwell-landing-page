@@ -8,6 +8,7 @@
         <Analyze />
         <Team />
         <Testimonials />
+        <Clients />
     </div>
 </template>
 <script>
