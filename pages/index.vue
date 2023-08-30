@@ -7,6 +7,7 @@
         <Work />
         <Analyze />
         <Team />
+        <Testimonials />
     </div>
 </template>
 <script>
