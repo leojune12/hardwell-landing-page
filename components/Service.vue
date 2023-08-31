@@ -7,8 +7,16 @@
             <div class="secondary-text text-base text-md-xl mb-5 mx-auto">
                 The sky was cloudless and of a deep dark blue spectacle before us was indeed sublime.
             </div>
-            <div class="row services gy-5 pt-0 pt-md-5">
-                <div class="col-md-4">
+            <swiper
+                :slides-per-view="props.breakpoint"
+                :space-between="50"
+                :modules="[Pagination]"
+                :pagination="{
+                    dynamicBullets: true,
+                }"
+                class="services row pb-5 pb-md-0"
+            >
+                <swiper-slide>
                     <div class="item mx-auto">
                         <div class="mb-4 d-flex justify-content-center justify-content-md-start">
                             <img src="/images/athletics.png" alt="">
@@ -22,8 +30,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
+                </swiper-slide>
+                <swiper-slide>
                     <div class="item mx-auto">
                         <div class="mb-4 d-flex justify-content-center justify-content-md-start">
                             <img src="/images/archery-target.png" alt="">
@@ -37,8 +45,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
+                </swiper-slide>
+                <swiper-slide>
                     <div class="item mx-auto">
                         <div class="mb-4 d-flex justify-content-center justify-content-md-start">
                             <img src="/images/money-coins.png" alt="">
@@ -52,15 +60,25 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </swiper-slide>
+            </swiper>
         </div>
     </div>
 </template>
-<script>
-export default {
+<script setup>
+    // Import Swiper Vue.js components
+    import { Swiper, SwiperSlide } from 'swiper/vue';
     
-}
+    // import required modules
+    import { Pagination } from 'swiper/modules';
+
+    // Import Swiper styles
+    import 'swiper/css';
+    import 'swiper/css/pagination';
+
+    const props = defineProps({
+        breakpoint: Number
+    })
 </script>
 <style lang="scss" scoped>
     .primary-text {
