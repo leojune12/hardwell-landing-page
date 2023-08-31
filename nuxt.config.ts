@@ -8,5 +8,9 @@ export default defineNuxtConfig({
   ],
   plugins: [
     { src: '~/plugins/bootstrap.js', mode: 'client'}
-  ]
+  ],
+  modules: ['nuxt-swiper'],
+  swiper: {
+    // Swiper options
+  }
 })
