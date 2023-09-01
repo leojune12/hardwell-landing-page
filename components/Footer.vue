@@ -68,12 +68,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between pt-5 row-gap-3">
-                    <div class="copyright-text text-center">
+                <div class="d-flex flex-column flex-md-row justify-content-between pt-5 row-gap-0 row-gap-md-3">
+                    <div class="copyright-text text-center order-2 order-md-1">
                         Copyright © 2020 Laaqiq. All Rights Reserved.
                     </div>
-                    <div class="text-center">
-                        <a href="#" class="link me-5">
+                    <div class="text-center d-flex flex-column flex-md-row order-1 order-md-2">
+                        <a href="#" class="link me-0 me-md-5">
                             Terms of Use
                         </a>
                         <a href="#" class="link">
