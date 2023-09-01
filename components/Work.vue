@@ -31,14 +31,27 @@
             </div>
         </div>
         <div class="container-xxl py-5">
-            <div class="row gy-3 gy-md-0">
-                <div class="col-md-6 d-flex justify-content-center">
+            <swiper
+                :slides-per-view="mediaBreakpointUp([
+                    ['md', 2],
+                ])"
+                :modules="[Pagination]"
+                :pagination="{
+                    dynamicBullets: true,
+                }"
+                class="services pb-5 pb-md-0"
+            >
+                <swiper-slide>
+                    <div class="d-flex justify-content-center">
                     <img src="/images/work-1.png" alt="" class="img-fluid">
                 </div>
-                <div class="col-md-6 d-flex justify-content-center">
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="d-flex justify-content-center">
                     <img src="/images/work-2.png" alt="" class="img-fluid">
                 </div>
-            </div>
+                </swiper-slide>
+            </swiper>
             <div class="row categories gy-4 pt-5">
                 <div class="col-md-4">
                     <div class="category-card p-5">
@@ -74,12 +87,34 @@
         </div>
     </div>
 </template>
-<script>
-export default {
+<script setup>
+    // Import Swiper Vue.js components
+    import { Swiper, SwiperSlide } from 'swiper/vue';
     
-}
+    // import required modules
+    import { Pagination } from 'swiper/modules';
+
+    // Import Swiper styles
+    import 'swiper/css';
+    import 'swiper/css/pagination';
+
+    const props = defineProps({
+        breakpoint: Object
+    })
+
+    let mediaBreakpointUp = (breakpoint) => {
+        let slidesPerView = 1
+
+        breakpoint.forEach(element => {
+            if (props.breakpoint.width >= props.breakpoint.sizes[element[0]]) {
+                slidesPerView = element[1]
+            }
+        })
+
+        return slidesPerView
+    }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .work-section {
         .header {
             .primary-text {

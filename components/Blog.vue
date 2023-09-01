@@ -1,10 +1,19 @@
 <template>
     <div class="container-xxl py-5">
-        <div class="primary-text text-4xl text-md-5xl text-center mb-5">
+        <div class="primary-text text-4xl text-md-5xl text-center">
             Latest From Blog
         </div>
-        <div class="row blogs gy-5 gy-md-0">
-            <div class="col-md-4">
+        <swiper
+            :slides-per-view="mediaBreakpointUp([
+                ['md', 2],
+                ['lg', 3],
+            ])"
+            :space-between="40"
+            :modules="[Pagination]"
+            :pagination="{dynamicBullets: true,}"
+            class="blogs py-5 pb-lg-0"
+        >
+            <swiper-slide>
                 <div class="item overflow-hidden mx-auto position-relative">
                     <div>
                         <img src="/images/blog-1.png" alt="" class="w-100">
@@ -23,8 +32,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </swiper-slide>
+            <swiper-slide>
                 <div class="item overflow-hidden mx-auto position-relative">
                     <div>
                         <img src="/images/blog-2.png" alt="" class="w-100">
@@ -43,8 +52,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </swiper-slide>
+            <swiper-slide>
                 <div class="item overflow-hidden mx-auto position-relative">
                     <div>
                         <img src="/images/blog-3.png" alt="" class="w-100">
@@ -63,14 +72,36 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </swiper-slide>
+        </swiper>
     </div>
 </template>
-<script>
-export default {
+<script setup>
+    // Import Swiper Vue.js components
+    import { Swiper, SwiperSlide } from 'swiper/vue';
     
-}
+    // import required modules
+    import { Pagination } from 'swiper/modules';
+
+    // Import Swiper styles
+    import 'swiper/css';
+    import 'swiper/css/pagination';
+
+    const props = defineProps({
+        breakpoint: Object
+    })
+
+    let mediaBreakpointUp = (breakpoint) => {
+        let slidesPerView = 1
+
+        breakpoint.forEach(element => {
+            if (props.breakpoint.width >= props.breakpoint.sizes[element[0]]) {
+                slidesPerView = element[1]
+            }
+        })
+
+        return slidesPerView
+    }
 </script>
 <style lang="scss" scoped>
     .primary-text {

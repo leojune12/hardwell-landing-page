@@ -8,13 +8,13 @@
                 The sky was cloudless and of a deep dark blue spectacle before us was indeed sublime.
             </div>
             <swiper
-                :slides-per-view="props.breakpoint"
-                :space-between="50"
+                :slides-per-view="mediaBreakpointUp([
+                    ['md', 2],
+                    ['lg', 3],
+                ])"
                 :modules="[Pagination]"
-                :pagination="{
-                    dynamicBullets: true,
-                }"
-                class="services row pb-5 pb-md-0"
+                :pagination="{dynamicBullets: true,}"
+                class="services pb-5 pb-xl-0"
             >
                 <swiper-slide>
                     <div class="item mx-auto">
@@ -77,8 +77,20 @@
     import 'swiper/css/pagination';
 
     const props = defineProps({
-        breakpoint: Number
+        breakpoint: Object
     })
+
+    let mediaBreakpointUp = (breakpoint) => {
+        let slidesPerView = 1
+
+        breakpoint.forEach(element => {
+            if (props.breakpoint.width >= props.breakpoint.sizes[element[0]]) {
+                slidesPerView = element[1]
+            }
+        })
+
+        return slidesPerView
+    }
 </script>
 <style lang="scss" scoped>
     .primary-text {

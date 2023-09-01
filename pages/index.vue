@@ -2,48 +2,57 @@
     <div>
         <NavBar />
         <Hero />
-        <Service :breakpoint="breakpoint" />
+        <Service :breakpoint="{
+            sizes: sizes,
+            width: width
+        }" />
         <About />
-        <Work />
+        <Work :breakpoint="{
+            sizes: sizes,
+            width: width
+        }" />
         <Analyze />
-        <Team />
-        <Testimonials />
+        <Team :breakpoint="{
+            sizes: sizes,
+            width: width
+        }" />
+        <Testimonials :breakpoint="{
+            sizes: sizes,
+            width: width
+        }" />
         <Clients />
-        <Blog />
+        <Blog :breakpoint="{
+            sizes: sizes,
+            width: width
+        }" />
         <Footer />
     </div>
 </template>
 <script setup>
     import { computed, onMounted, onUnmounted, ref } from "vue"
 
-    function breakpoints() {
-        let windowWidth = ref(window.innerWidth)
+    // Get current screen width
+    let windowWidth = ref(window.innerWidth)
+    const onWidthChange = () => windowWidth.value = window.innerWidth
+    onMounted(() => window.addEventListener('resize', onWidthChange))
+    onUnmounted(() => window.removeEventListener('resize', onWidthChange))
+    const width = computed(() => windowWidth.value)
 
-        const onWidthChange = () => windowWidth.value = window.innerWidth
-        onMounted(() => window.addEventListener('resize', onWidthChange))
-        onUnmounted(() => window.removeEventListener('resize', onWidthChange))
-
-        const type = computed(() => {
-
-            if (windowWidth.value >= 1400) return 'xxl'
-            if (windowWidth.value >= 1200) return 'xl'
-            if (windowWidth.value >= 992) return 'lg'
-            if (windowWidth.value >= 768) return 'md'
-            if (windowWidth.value >= 576) return 'sm'
-            if (windowWidth.value >= 0) return 'xs'
-        })
-
-        const width = computed(() => windowWidth.value)
-
-        return { width, type }
+    let sizes = {
+        xs: 0,
+        sm: 576,
+        md: 768,
+        lg: 992,
+        xl: 1200,
+        xxl: 1400,
     }
-
-    let { width, type } = breakpoints()
-
-    const breakpoint = computed(() => width.value >= 768 ? 3 : 1)
 </script>
 <style lang="scss">
     body {
         overflow-y: auto !important;
+    }
+
+    .swiper-wrapper {
+        padding: 0;
     }
 </style>

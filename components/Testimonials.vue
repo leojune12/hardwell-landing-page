@@ -8,7 +8,7 @@
                 Read some awesome feedback from our students all over the world. We are giving the best to our students
             </div>
         </div>
-        <div class="testimonials row gy-4 gy-md-0 pt-5">
+        <!-- <div class="testimonials row gy-4 gy-md-0 pt-5">
             <div class="col-md-4">
                 <div class="item px-4 py-5">
                     <div class="mb-4 testimony">
@@ -69,13 +69,106 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <swiper
+            :slides-per-view="mediaBreakpointUp([
+                ['md', 2],
+                ['lg', 3],
+            ])"
+            :space-between="40"
+            :modules="[Pagination]"
+            :pagination="{dynamicBullets: true,}"
+            class="testimonials py-5 pb-lg-0"
+        >
+            <swiper-slide>
+                <div class="item px-4 py-5">
+                    <div class="mb-4 testimony">
+                        Lorem ipsum dolor sit amet, con adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <img src="/images/testimonial.png" alt="">
+                        </div>
+                        <div class="">
+                            <div class="name">
+                                BILLY ROOT
+                            </div>
+                            <div class="company">
+                                Torest
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="item px-4 py-5">
+                    <div class="mb-4 testimony">
+                        Lorem ipsum dolor sit amet, con adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <img src="/images/testimonial.png" alt="">
+                        </div>
+                        <div class="">
+                            <div class="name">
+                                BILLY ROOT
+                            </div>
+                            <div class="company">
+                                Torest
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="item px-4 py-5">
+                    <div class="mb-4 testimony">
+                        Lorem ipsum dolor sit amet, con adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <img src="/images/testimonial.png" alt="">
+                        </div>
+                        <div class="">
+                            <div class="name">
+                                BILLY ROOT
+                            </div>
+                            <div class="company">
+                                Torest
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+        </swiper>
     </div>
 </template>
-<script>
-export default {
+<script setup>
+    // Import Swiper Vue.js components
+    import { Swiper, SwiperSlide } from 'swiper/vue';
     
-}
+    // import required modules
+    import { Pagination } from 'swiper/modules';
+
+    // Import Swiper styles
+    import 'swiper/css';
+    import 'swiper/css/pagination';
+
+    const props = defineProps({
+        breakpoint: Object
+    })
+
+    let mediaBreakpointUp = (breakpoint) => {
+        let slidesPerView = 1
+
+        breakpoint.forEach(element => {
+            if (props.breakpoint.width >= props.breakpoint.sizes[element[0]]) {
+                slidesPerView = element[1]
+            }
+        })
+
+        return slidesPerView
+    }
 </script>
 <style lang="scss" scoped>
     .primary-text {
